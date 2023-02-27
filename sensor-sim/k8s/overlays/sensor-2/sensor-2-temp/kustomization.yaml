@@ -1,0 +1,10 @@
+kind: Kustomization
+
+namePrefix: s2-temp-
+
+bases:
+  - ../../../base
+
+patchesStrategicMerge:
+  - sensor-sim-cm.yaml
+

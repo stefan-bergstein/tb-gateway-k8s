@@ -1,3 +1,7 @@
+# This project specific
+config/
+certs-nogit/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

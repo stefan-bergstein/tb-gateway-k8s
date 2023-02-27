@@ -1,0 +1,11 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: tb-gateway-conf
+  namespace: tb-gateway 
+data:
+  host: tb-mqtt-tls-thingsboard.apps.ocp5.stormshift.coe.muc.redhat.com
+  port: '443'
+  accessToken: MY_GW_ACCESS_TOKEN
+  caCert: ../../certs/server.pem
+

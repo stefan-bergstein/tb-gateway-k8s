@@ -1,0 +1,9 @@
+kind: Kustomization
+
+resources:
+  - sensor-1/
+  - sensor-2/
+
+
+
+

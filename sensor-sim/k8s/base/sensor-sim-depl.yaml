@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sensor-sim
+  labels:
+    app: tb-sensor-sim
+spec:
+  selector:
+    matchLabels:
+      app: sensor-sim
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: sensor-sim
+    spec:
+      containers:
+        - name: sensor-sim
+          image: quay.io/sbergste/tb-gw-sim:latest
+          imagePullPolicy: Always
+          envFrom:
+            - configMapRef:
+                name: sensor-sim-conf
+          securityContext:
+            allowPrivilegeEscalation: false
+            runAsNonRoot: true
+            capabilities:
+              drop:
+                - ALL
+            seccompProfile:
+              type: RuntimeDefault
+      restartPolicy: Always

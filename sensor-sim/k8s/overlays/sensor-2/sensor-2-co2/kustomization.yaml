@@ -1,0 +1,12 @@
+kind: Kustomization
+
+namePrefix: s2-co2-
+
+bases:
+  - ../../../base
+
+patchesStrategicMerge:
+  - sensor-sim-cm.yaml
+
+
+

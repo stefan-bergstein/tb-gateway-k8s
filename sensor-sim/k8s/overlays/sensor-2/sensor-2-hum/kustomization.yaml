@@ -1,0 +1,12 @@
+kind: Kustomization
+
+namePrefix: s2-hum-
+
+bases:
+  - ../../../base
+
+patchesStrategicMerge:
+  - sensor-sim-cm.yaml
+
+
+

@@ -1,0 +1,16 @@
+kind: Kustomization
+
+commonLabels:
+  app: sensor-sim-2
+
+namespace: tb-sensor-2
+
+resources:
+  - namespace.yaml
+  - sensor-2-co2/
+  - sensor-2-hum/
+  - sensor-2-temp/
+
+
+
+

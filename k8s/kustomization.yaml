@@ -1,0 +1,6 @@
+kind: Kustomization
+
+resources:
+  - tb-gateway-cert.yaml
+  - tb-gateway-conf.yaml
+  - tb-gw-ushift.yaml
